@@ -1,0 +1,57 @@
+name: Build macOS Executable
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Step 3: Install Python dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller  # Install PyInstaller
+
+      # Step 4: Download and extract ffmpeg for macOS
+      - name: Download and Extract ffmpeg
+        run: |
+          mkdir -p ffmpeg/mac
+          curl -L https://evermeet.cx/ffmpeg/ffmpeg-7.1.7z -o ffmpeg-mac.7z
+          brew install p7zip  # Install 7zip if not available
+          7z x ffmpeg-mac.7z -offmpeg/mac
+          rm ffmpeg-mac.7z  # Clean up downloaded archive
+
+      # Step 5: Build the macOS executable using PyInstaller
+      - name: Run PyInstaller
+        run: |
+          python deploy.py
+
+      # Step 6: Archive the generated executable
+      - name: Archive Executable
+        run: |
+          mkdir -p dist
+          mv dist/GMClip dist/macos
+        if: success()
+
+      # Step 7: Upload the macOS executable as an artifact
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: macOS-executable
+          path: dist/macos
