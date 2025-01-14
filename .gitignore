@@ -10,3 +10,5 @@ logs
 *__pycache__*
 build
 block_editor.egg-info
+GMClip.spec
+nltk_runtime_debug.log
