@@ -1,0 +1,56 @@
+name: Build macOS Executable (x86_64)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Rosetta 2
+        run: |
+          softwareupdate --install-rosetta --agree-to-license
+
+      - name: Set up Python for x86_64
+        run: |
+          arch -x86_64 /usr/local/bin/python3 -m ensurepip --upgrade
+          arch -x86_64 /usr/local/bin/python3 -m pip install --upgrade pip
+        shell: bash
+
+      - name: Install Dependencies for x86_64
+        run: |
+          arch -x86_64 python3 -m pip install -r requirements.txt
+        shell: bash
+
+      - name: Run PyInstaller for x86_64
+        run: |
+          arch -x86_64 python3 deploy.py
+        shell: bash
+
+      - name: Create DMG Installer
+        run: |
+          brew install create-dmg
+          create-dmg \
+            --volname "GMClip Installer" \
+            --window-pos 200 120 \
+            --window-size 500 300 \
+            --icon-size 100 \
+            --icon "GMClip.app" 125 150 \
+            --hide-extension "GMClip.app" \
+            --app-drop-link 375 150 \
+            dist/GMClip.dmg \
+            dist/GMClip.app
+        shell: bash
+
+      - name: Upload macOS DMG
+        uses: actions/upload-artifact@v3
+        with:
+          name: GMClip-macOS-dmg-x86_64
+          path: dist/GMClip.dmg
