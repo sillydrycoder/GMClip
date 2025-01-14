@@ -1,0 +1,13 @@
+Refactor: Convert relative imports to absolute imports for compatibility with PyInstaller
+
+- Updated imports in `block_editor/__main__.py` to use absolute paths (e.g., `from block_editor.gui.video_player`).
+- Resolved runtime ImportError caused by relative imports when packaging the application with PyInstaller.
+- Ensures consistent behavior in both standalone executables and Python package execution contexts.
+
+Suppress console output in PyInstaller builds
+
+- Added a check to redirect stdout and stderr to os.devnull only when running a PyInstaller build. This ensures that console output is suppressed in packaged executables while retaining visibility during development.
+
+
+
+https://github.com/sillydrycoder

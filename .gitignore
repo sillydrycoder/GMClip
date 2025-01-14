@@ -1,0 +1,12 @@
+.aider*
+.env
+dist
+ffmpeg
+nltk_data
+build
+__pycache__
+.transcription_cache
+logs
+*__pycache__*
+build
+block_editor.egg-info

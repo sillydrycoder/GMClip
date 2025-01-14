@@ -1,0 +1,20 @@
+PROGRESS:
+[x] Create LabelManager class with persistence
+[x] Update AudioBlock to support labels
+[x] Replace green/red mode with read/overwrite mode
+[x] Add label management UI
+[x] Update BlockTimeline to show label colors
+[x] Add keyboard shortcuts for label selection
+[x] Modify export functionality for multiple labels
+[x] Add preview functionality for blocks by label
+
+REQUIREMENTS:
+- Default labels: 'remove' and 'keep'
+- Keyboard shortcuts and buttons for label selection
+- One label per block
+- Export format: <label_name>_blocks with original quality
+- Labels persist between sessions
+- Show current label and mode selection
+- Preview blocks by label
+
+

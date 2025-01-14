@@ -1,0 +1,127 @@
+Video Block Editor Project Overview
+
+Purpose:
+A sophisticated video editing tool designed to split videos into labeled segments with customizable playback and export options. The tool is particularly useful for content creators who need to segment and categorize parts of longer videos.
+
+Project Structure:
+```
+block_editor/
+|-- __init__.py
+|-- __main__.py           # Main entry point
+|-- core/                 # Core functionality
+|   |-- __init__.py
+|   |-- audio_block.py    # Audio block data structure
+|   |-- block_manager.py  # Block management and state
+|   `-- label_manager.py  # Label management system
+|-- gui/                  # GUI components
+|   |-- __init__.py
+|   |-- custom_widgets.py # Custom Qt widgets
+|   |-- dialogs.py       # Dialog windows
+|   `-- video_player.py   # Main video player window
+`-- utils/                # Utility functions
+    |-- __init__.py
+    `-- silence_detector.py # Silence detection using FFmpeg
+```
+
+Core Components:
+
+1. Core Module
+- AudioBlock: Represents a segment of video with metadata
+- BlockManager: Handles block operations and state management
+- LabelManager: Manages customizable labels with colors and hotkeys
+
+2. GUI Module
+- VideoPlayer: Main application window with video playback and controls
+- CustomWidgets: Timeline and slider implementations
+- Dialogs: Label manager and preview dialogs
+
+3. Utils Module
+- SilenceDetector: FFmpeg integration for silence detection
+
+Key Features:
+
+1. Video Processing
+- Automatic silence detection for block segmentation
+- FFmpeg integration for video processing and export
+- Maintains original video quality during exports
+
+2. Block Management
+- Splits videos into blocks based on silence detection
+- Visual timeline with color-coded blocks
+- Block navigation with keyboard shortcuts
+- Support for labeling and categorizing blocks
+
+3. User Interface
+- Customizable controls panel
+- Interactive timeline with zoom functionality
+- Preview mode for labeled segments
+- Label manager for custom categories
+- Progress tracking for block navigation
+
+4. Export Capabilities
+- Export blocks by label
+- Maintains original video quality
+- Automatic file naming based on labels
+- Support for multiple export formats
+
+5. State Management
+- Save/load functionality for block states
+- Persistent label configurations
+- Session recovery support
+
+Technical Requirements and Dependencies:
+1. System Requirements:
+- Python 3.x
+- FFmpeg installed and accessible from command line
+- System-level video codec support
+
+2. Python Dependencies:
+- PySide6 (>=6.6.0) - Qt framework for GUI
+- numpy (>=1.26.0) - Numerical computations
+- pydub (0.25.1) - Audio processing
+- opencv-python (>=4.8.0) - Video processing
+- setuptools (>=65.5.0) - Build and installation
+
+Installation:
+1. System Setup:
+   ```bash
+   # Install FFmpeg (Ubuntu/Debian)
+   sudo apt-get install ffmpeg
+
+   # Install FFmpeg (MacOS)
+   brew install ffmpeg
+
+   # Install FFmpeg (Windows)
+   # Download from https://ffmpeg.org/download.html
+   ```
+
+2. Python Dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+Target Users:
+- Content creators
+- Video editors
+- Researchers working with video content
+- Anyone needing to segment and categorize video content
+
+Use Cases:
+1. Content editing - Marking segments to keep or remove
+2. Video analysis - Categorizing different types of content
+3. Educational content - Segmenting lectures or tutorials
+4. Research - Analyzing and categorizing video segments
+
+Controls and Shortcuts:
+- Space: Play/Pause video
+- Left/Right Arrow: Navigate between blocks
+- K: Quick label as "keep"
+- R: Quick label as "remove"
+- +/-: Zoom timeline view in/out
+- \: Open label manager
+- Tab: Toggle between read/write modes
+
+Configuration:
+- Labels are stored in ~/.config/video_editor/labels.json
+- Project states can be saved and loaded for session recovery
+- Custom labels can be created with unique colors and hotkeys

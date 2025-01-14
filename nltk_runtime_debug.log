@@ -1,0 +1,865 @@
+2024-11-17 13:57:44,389 - INFO - Attempting to use NLTK data path: C:\Programming\block-editor2\nltk_data
+2024-11-17 13:57:44,390 - INFO - Starting comprehensive module import debugging
+2024-11-17 13:57:44,390 - INFO - Python Version: 3.10.13 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:24:38) [MSC v.1916 64 bit (AMD64)]
+2024-11-17 13:57:44,390 - INFO - Platform: win32
+2024-11-17 13:57:44,390 - INFO - PYTHONPATH: ['C:\\Programming\\block-editor2', 'C:\\Users\\Aj\\miniconda3\\python310.zip', 'C:\\Users\\Aj\\miniconda3\\DLLs', 'C:\\Users\\Aj\\miniconda3\\lib', 'C:\\Users\\Aj\\miniconda3', 'C:\\Users\\Aj\\AppData\\Roaming\\Python\\Python310\\site-packages', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages', '__editable__.aider_chat-0.1.dev8360+g52c49fc.d20241111.finder.__path_hook__', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\wsproto-1.2.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\wrapt-1.15.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\wheel-0.38.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\websockets-11.0.3-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\watchdog-3.0.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\wasabi-1.1.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\wandb-0.13.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\virtualenv-20.23.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\vcrpy-4.2.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\uvicorn-0.23.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\urllib3_secure_extra-0.1.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\typing_inspect-0.8.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\typing_extensions-4.5.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\tweepy-4.14.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\trio_websocket-0.10.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\trio-0.22.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\tiktoken-0.5.1-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\thinc-8.1.10-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\tenacity-8.2.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\starlette-0.27.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\stack_data-0.6.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\srsly-2.4.6-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\sqlparse-0.4.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\sqlalchemy-2.0.15-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\spacy_loggers-1.0.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\spacy_legacy-3.0.12-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\spacy-3.5.3-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\soupsieve-2.4.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\sortedcontainers-2.4.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\socksio-1.0.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\smart_open-6.3.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\shellingham-1.5.0.post1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\setproctitle-1.3.2-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\sentry_sdk-1.31.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\semantic_version-2.10.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\requests_oauthlib-1.3.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\requests-2.30.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\regex-2023.5.5-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\redis-4.5.5-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pyyaml_env_tag-0.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\python_docx-0.8.11-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_xdist-3.3.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_recording-0.12.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_integration-0.2.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_cov-4.0.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_benchmark-4.0.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest_asyncio-0.21.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pytest-7.2.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pyrsistent-0.19.3-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pyopenssl-23.1.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pymdown_extensions-10.0.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pygments-2.15.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pydub-0.25.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pyasn1_modules-0.3.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pyasn1-0.5.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\py3langid-0.2.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\py_cpuinfo-9.0.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pure_eval-0.2.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\ptyprocess-0.7.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\psutil-5.9.5-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\protobuf-3.20.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\promise-2.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\preshed-3.0.8-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pre_commit-3.3.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\platformdirs-3.5.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pip-23.0.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pillow-9.5.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pickleshare-0.7.5-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pathy-0.10.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pathtools-0.1.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\parso-0.8.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\pandas-1.4.1-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\outcome-1.2.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\orjson-3.8.10-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\openpyxl-3.2.0b1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\opencv_python-4.8.0.76-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\openapi_schema_pydantic-1.2.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\openapi_python_client-0.13.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\oauthlib-3.2.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\numpy-1.25.2-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\numexpr-2.8.4-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\murmurhash-1.0.9-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\mkl_service-2.4.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\mkdocs-1.4.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\mergedeep-1.3.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\meilisearch-0.21.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\mccabe-0.7.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\markdown-3.3.7-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\loguru-0.6.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\langcodes-3.3.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\langchainplus_sdk-0.0.20-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\jedi-0.18.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\isort-5.12.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\iso_639-0.4.5-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\ipython-8.14.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\ipdb-0.13.13-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\importlib_resources-6.1.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\icecream-2.1.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\httpx-0.24.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\httpcore-0.17.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\gradio_client-0.5.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\gradio-3.44.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\google_search_results-2.4.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\google_auth-2.18.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\google_api_python_client-2.86.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\ghp_import-2.1.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\fsspec-2023.9.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\fonttools-4.42.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\fire-0.4.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\filelock-3.12.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\ffmpy-0.3.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\fastapi-0.103.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\faiss_cpu-1.7.4-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\executing-1.2.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\execnet-1.9.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\et_xmlfile-1.1.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\duckduckgo_search-2.9.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\docker_pycreds-0.4.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\docker-6.1.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\django-4.2.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\cymem-2.0.7-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\cycler-0.11.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\cryptography-40.0.2-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\coverage-7.2.5-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\confection-0.0.4-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\common-0.1.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\channels-4.0.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\certifi-2023.7.22-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\catalogue-2.0.8-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\camel_converter-3.0.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\blis-0.7.9-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\beautifulsoup4-4.12.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\backcall-0.2.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\autoflake-2.1.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\auto_gpt_plugin_template-0.0.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\asynctest-0.13.0-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\async_generator-1.10-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\astunparse-1.6.3-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\asttokens-2.2.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\asgiref-3.7.2-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\anyio-3.7.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\anthropic-0.3.6-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\altair-5.1.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\aiofiles-23.2.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\abstract_singleton-1.0.1-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\matplotlib_inline-0.1.6-py3.10.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\mkl-2023.2.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\tbb-2021.10.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\intel_openmp-2023.2.0-py3.10-win-amd64.egg', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\win32', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\win32\\lib', 'C:\\Users\\Aj\\miniconda3\\lib\\site-packages\\Pythonwin']
+2024-11-17 13:57:44,391 - INFO - NLTK_DATA env var: C:\Programming\block-editor2\nltk_data
+2024-11-17 13:57:45,121 - CRITICAL - Comprehensive NLTK data check failed: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,128 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 177, in check_nltk_data
+    import nltk
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\__init__.py", line 133, in <module>
+    from nltk.collocations import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\collocations.py", line 36, in <module>
+    from nltk.metrics import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\__init__.py", line 18, in <module>
+    from nltk.metrics.association import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\association.py", line 26, in <module>
+    from scipy.stats import fisher_exact
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,145 - ERROR - Could not log NLTK paths: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,146 - INFO - Successfully imported scipy
+2024-11-17 13:57:45,165 - CRITICAL - Unexpected error importing scipy.integrate._quadpack: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,168 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\__init__.py", line 91, in <module>
+    from ._quadrature import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\_quadrature.py", line 10, in <module>
+    from scipy.special import roots_legendre
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,172 - CRITICAL - Unexpected error importing scipy.stats.distributions: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,173 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,197 - ERROR - ImportError for scipy.sparse.linalg._propack._cpropack: numpy.core.multiarray failed to import
+2024-11-17 13:57:45,198 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\__init__.py", line 267, in <module>
+    from ._csr import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:45,201 - CRITICAL - Unexpected error importing scipy.stats._continuous_distns: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,202 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,204 - CRITICAL - Unexpected error importing scipy.integrate._odepack: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,205 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\__init__.py", line 91, in <module>
+    from ._quadrature import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\_quadrature.py", line 10, in <module>
+    from scipy.special import roots_legendre
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,206 - CRITICAL - Unexpected error importing scipy.special.cython_special: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,206 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,213 - ERROR - ImportError for scipy.optimize._minpack: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+2024-11-17 13:57:45,217 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\__init__.py", line 404, in <module>
+    from ._optimize import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\_optimize.py", line 30, in <module>
+    from numpy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
+ImportError: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+
+2024-11-17 13:57:45,225 - CRITICAL - Unexpected error importing scipy.stats._mvn: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,225 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,228 - ERROR - ImportError for scipy.optimize._slsqp: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+2024-11-17 13:57:45,228 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\__init__.py", line 404, in <module>
+    from ._optimize import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\_optimize.py", line 30, in <module>
+    from numpy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
+ImportError: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+
+2024-11-17 13:57:45,231 - ERROR - ImportError for scipy.sparse.linalg._propack._spropack: numpy.core.multiarray failed to import
+2024-11-17 13:57:45,231 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\__init__.py", line 267, in <module>
+    from ._csr import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:45,234 - ERROR - ImportError for scipy.optimize._cobyla: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+2024-11-17 13:57:45,234 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\__init__.py", line 404, in <module>
+    from ._optimize import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\_optimize.py", line 30, in <module>
+    from numpy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
+ImportError: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+
+2024-11-17 13:57:45,249 - CRITICAL - Unexpected error importing nltk: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,249 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\__init__.py", line 133, in <module>
+    from nltk.collocations import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\collocations.py", line 36, in <module>
+    from nltk.metrics import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\__init__.py", line 18, in <module>
+    from nltk.metrics.association import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\association.py", line 26, in <module>
+    from scipy.stats import fisher_exact
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,251 - CRITICAL - Unexpected error importing scipy.special.basic: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,252 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,268 - CRITICAL - Unexpected error importing nltk.data: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,269 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\__init__.py", line 133, in <module>
+    from nltk.collocations import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\collocations.py", line 36, in <module>
+    from nltk.metrics import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\__init__.py", line 18, in <module>
+    from nltk.metrics.association import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\association.py", line 26, in <module>
+    from scipy.stats import fisher_exact
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,284 - CRITICAL - Unexpected error importing nltk.metrics: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,285 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\__init__.py", line 133, in <module>
+    from nltk.collocations import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\collocations.py", line 36, in <module>
+    from nltk.metrics import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\__init__.py", line 18, in <module>
+    from nltk.metrics.association import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\association.py", line 26, in <module>
+    from scipy.stats import fisher_exact
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,299 - CRITICAL - Unexpected error importing nltk.tokenize: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,300 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\__init__.py", line 133, in <module>
+    from nltk.collocations import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\collocations.py", line 36, in <module>
+    from nltk.metrics import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\__init__.py", line 18, in <module>
+    from nltk.metrics.association import (
+  File "C:\Users\Aj\miniconda3\lib\site-packages\nltk\metrics\association.py", line 26, in <module>
+    from scipy.stats import fisher_exact
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,304 - ERROR - ImportError for scipy.optimize._lbfgsb: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+2024-11-17 13:57:45,304 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\__init__.py", line 404, in <module>
+    from ._optimize import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\optimize\_optimize.py", line 30, in <module>
+    from numpy import (atleast_1d, eye, argmin, zeros, shape, squeeze,
+ImportError: cannot import name 'Inf' from 'numpy' (C:\Users\Aj\AppData\Roaming\Python\Python310\site-packages\numpy\__init__.py)
+
+2024-11-17 13:57:45,309 - CRITICAL - Unexpected error importing scipy.stats._stats_mstats_common: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,310 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,313 - CRITICAL - Unexpected error importing scipy.special.orthogonal: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,313 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,315 - CRITICAL - Unexpected error importing scipy.integrate._dop: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,317 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\__init__.py", line 91, in <module>
+    from ._quadrature import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\_quadrature.py", line 10, in <module>
+    from scipy.special import roots_legendre
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,320 - CRITICAL - Unexpected error importing scipy.stats._binned_statistic: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:45,320 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:45,333 - ERROR - ImportError for scipy.linalg._interpolative: numpy.core.multiarray failed to import
+2024-11-17 13:57:45,333 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\linalg\__init__.py", line 197, in <module>
+    from ._misc import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\linalg\_misc.py", line 3, in <module>
+    from .blas import get_blas_funcs
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\linalg\blas.py", line 213, in <module>
+    from scipy.linalg import _fblas
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:45,335 - ERROR - ImportError for scipy.sparse.linalg._eigen.arpack._arpack: numpy.core.multiarray failed to import
+2024-11-17 13:57:45,336 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\__init__.py", line 267, in <module>
+    from ._csr import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:45,338 - ERROR - ImportError for scipy.sparse.linalg._propack._zpropack: numpy.core.multiarray failed to import
+2024-11-17 13:57:45,338 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\__init__.py", line 267, in <module>
+    from ._csr import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:49,764 - INFO - Successfully imported transformers
+2024-11-17 13:57:49,767 - CRITICAL - Unexpected error importing scipy.integrate._vode: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,767 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\__init__.py", line 91, in <module>
+    from ._quadrature import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\_quadrature.py", line 10, in <module>
+    from scipy.special import roots_legendre
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:49,769 - ERROR - ImportError for scipy.sparse.linalg._propack._dpropack: numpy.core.multiarray failed to import
+2024-11-17 13:57:49,770 - ERROR - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\__init__.py", line 267, in <module>
+    from ._csr import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\sparse\_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+ImportError: numpy.core.multiarray failed to import
+
+2024-11-17 13:57:49,770 - INFO - Successfully imported transformers.dependency_versions_check
+2024-11-17 13:57:49,770 - INFO - Successfully imported transformers.utils
+2024-11-17 13:57:49,774 - CRITICAL - Unexpected error importing scipy.stats._discrete_distns: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,775 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\__init__.py", line 485, in <module>
+    from ._stats_py import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy.spatial.distance import cdist
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\__init__.py", line 105, in <module>
+    from ._kdtree import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\spatial\_kdtree.py", line 4, in <module>
+    from ._ckdtree import cKDTree, cKDTreeNode
+  File "_ckdtree.pyx", line 1, in init scipy.spatial._ckdtree
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:49,776 - CRITICAL - Unexpected error importing scipy.special: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,777 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:49,780 - CRITICAL - Unexpected error importing scipy.integrate._lsoda: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,780 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\__init__.py", line 91, in <module>
+    from ._quadrature import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\integrate\_quadrature.py", line 10, in <module>
+    from scipy.special import roots_legendre
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:49,786 - CRITICAL - Unexpected error importing scipy.interpolate._fitpack: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,788 - CRITICAL - Traceback (most recent call last):
+  File "C:\Programming\block-editor2\debug_imports.py", line 78, in debug_import
+    module = importlib.import_module(module_name)
+  File "C:\Users\Aj\miniconda3\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\interpolate\__init__.py", line 167, in <module>
+    from ._interpolate import *
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\interpolate\_interpolate.py", line 8, in <module>
+    import scipy.special as spec
+  File "C:\Users\Aj\miniconda3\lib\site-packages\scipy\special\__init__.py", line 663, in <module>
+    from . import _ufuncs
+  File "scipy\special\_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+
+2024-11-17 13:57:49,788 - INFO - Import Summary:
+2024-11-17 13:57:49,789 - INFO - scipy: Success
+2024-11-17 13:57:49,789 - INFO - scipy.integrate._quadpack: Failed
+2024-11-17 13:57:49,789 - INFO - scipy.stats.distributions: Failed
+2024-11-17 13:57:49,789 - INFO - scipy.sparse.linalg._propack._cpropack: Failed
+2024-11-17 13:57:49,789 - INFO - scipy.stats._continuous_distns: Failed
+2024-11-17 13:57:49,789 - INFO - scipy.integrate._odepack: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.special.cython_special: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.optimize._minpack: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.stats._mvn: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.optimize._slsqp: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.sparse.linalg._propack._spropack: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.optimize._cobyla: Failed
+2024-11-17 13:57:49,790 - INFO - nltk: Failed
+2024-11-17 13:57:49,790 - INFO - scipy.special.basic: Failed
+2024-11-17 13:57:49,790 - INFO - nltk.data: Failed
+2024-11-17 13:57:49,791 - INFO - nltk.metrics: Failed
+2024-11-17 13:57:49,791 - INFO - nltk.tokenize: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.optimize._lbfgsb: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.stats._stats_mstats_common: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.special.orthogonal: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.integrate._dop: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.stats._binned_statistic: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.linalg._interpolative: Failed
+2024-11-17 13:57:49,791 - INFO - scipy.sparse.linalg._eigen.arpack._arpack: Failed
+2024-11-17 13:57:49,792 - INFO - scipy.sparse.linalg._propack._zpropack: Failed
+2024-11-17 13:57:49,792 - INFO - transformers: Success
+2024-11-17 13:57:49,792 - INFO - scipy.integrate._vode: Failed
+2024-11-17 13:57:49,792 - INFO - scipy.sparse.linalg._propack._dpropack: Failed
+2024-11-17 13:57:49,792 - INFO - transformers.dependency_versions_check: Success
+2024-11-17 13:57:49,792 - INFO - transformers.utils: Success
+2024-11-17 13:57:49,792 - INFO - scipy.stats._discrete_distns: Failed
+2024-11-17 13:57:49,792 - INFO - scipy.special: Failed
+2024-11-17 13:57:49,792 - INFO - scipy.integrate._lsoda: Failed
+2024-11-17 13:57:49,792 - INFO - scipy.interpolate._fitpack: Failed
+2024-11-17 13:57:49,809 - ERROR - Could not log NLTK version: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+2024-11-17 13:57:49,809 - INFO - Module import debugging complete
