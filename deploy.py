@@ -15,7 +15,7 @@ def get_platform_info():
     elif sys.platform == 'darwin':
         return {
             'ffmpeg_path': 'ffmpeg/mac',
-            'ffmpeg_files': ['ffmpeg'],
+            'ffmpeg_files': ['ffmpeg' , 'ffplay', 'ffprobe'],
             'separator': ':',
             'output_name': 'GMClip'
         }
@@ -36,6 +36,7 @@ def main():
         src = os.path.join(platform_info['ffmpeg_path'], file)
         if os.path.exists(src):
             ffmpeg_files.append((src, '.'))
+            print(f"Found {src} , adding to the build")
 
     # Build with PyInstaller
     PyInstaller.__main__.run([
