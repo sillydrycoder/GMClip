@@ -1,8 +1,6 @@
 import os
 import sys
 import shutil
-import requests
-from tqdm import tqdm
 import PyInstaller.__main__
 
 def get_platform_info():
