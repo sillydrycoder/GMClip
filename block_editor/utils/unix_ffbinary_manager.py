@@ -17,6 +17,19 @@ def sanitize_filename(url):
     """
     return os.path.basename(url.split("?")[0])
 
+def install_7z():
+    """
+    Installs 7z using Homebrew if not already installed.
+    """
+    try:
+        print("Checking if 7z is installed...")
+        subprocess.run(["7z", "--help"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        print("7z is already installed.")
+    except FileNotFoundError:
+        print("7z not found. Installing via Homebrew...")
+        subprocess.run(["brew", "install", "p7zip"], check=True)
+        print("7z installed successfully.")
+
 def install_mac_binaries():
     dest_dir = "/usr/local/bin"
     success = True
@@ -25,6 +38,9 @@ def install_mac_binaries():
     if not os.path.exists(dest_dir):
         print(f"Destination directory '{dest_dir}' does not exist.")
         return False
+
+    # Ensure 7z is installed
+    install_7z()
 
     for url in mac_binary_urls:
         try:
