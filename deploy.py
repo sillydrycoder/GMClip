@@ -8,21 +8,21 @@ def get_platform_info():
     if sys.platform == 'win32':
         return {
             'ffmpeg_path': 'ffmpeg/windows',
-            'ffmpeg_files': ['ffmpeg.exe', 'ffplay.exe', 'ffprobe.exe'],
+            'ffmpeg_files': ['ffmpeg.exe', 'ffprobe.exe'],
             'separator': ';',
             'output_name': 'GMClip.exe'
         }
     elif sys.platform == 'darwin':
         return {
             'ffmpeg_path': 'ffmpeg/mac',
-            'ffmpeg_files': ['ffmpeg' , 'ffplay', 'ffprobe'],
+            'ffmpeg_files': ['ffmpeg', 'ffprobe'],
             'separator': ':',
             'output_name': 'GMClip'
         }
     else:  # Linux
         return {
             'ffmpeg_path': 'ffmpeg/linux',
-            'ffmpeg_files': ['ffmpeg'],
+            'ffmpeg_files': ['ffmpeg', 'ffprobe'],
             'separator': ':',
             'output_name': 'GMClip'
         }
