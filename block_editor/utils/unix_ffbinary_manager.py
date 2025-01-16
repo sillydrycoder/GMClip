@@ -3,12 +3,19 @@ import requests
 import shutil
 import tempfile
 import py7zr
+import subprocess
 
 # Example usage
 mac_binary_urls = [
     "https://evermeet.cx/ffmpeg/ffmpeg-118273-g251de1791e.7z",
     "https://evermeet.cx/ffmpeg/ffprobe-118273-g251de1791e.7z"
 ]
+
+def sanitize_filename(url):
+    """
+    Extracts a clean filename from a URL.
+    """
+    return os.path.basename(url.split("?")[0])
 
 def install_mac_binaries():
     dest_dir = "/usr/local/bin"
@@ -24,7 +31,7 @@ def install_mac_binaries():
             print(f"Processing {url}...")
             # Create a temporary file for downloading
             with tempfile.TemporaryDirectory() as tmp_dir:
-                file_name = os.path.join(tmp_dir, os.path.basename(url))
+                file_name = os.path.join(tmp_dir, sanitize_filename(url))
 
                 # Download the file
                 print(f"Downloading {url}...")
@@ -40,9 +47,14 @@ def install_mac_binaries():
                 extract_dir = os.path.join(tmp_dir, "extracted")
                 os.makedirs(extract_dir, exist_ok=True)
 
-                # Extract .7z files using py7zr
-                with py7zr.SevenZipFile(file_name, mode='r') as archive:
-                    archive.extractall(path=extract_dir)
+                # Try py7zr first
+                try:
+                    with py7zr.SevenZipFile(file_name, mode='r') as archive:
+                        archive.extractall(path=extract_dir)
+                except Exception as e:
+                    print(f"py7zr extraction failed: {e}. Falling back to system '7z'.")
+                    # Fallback to system 7z command
+                    subprocess.run(["7z", "x", file_name, f"-o{extract_dir}"], check=True)
 
                 # Move the binaries to the destination directory
                 for root, _, files in os.walk(extract_dir):
