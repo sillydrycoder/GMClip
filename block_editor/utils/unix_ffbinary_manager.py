@@ -2,7 +2,7 @@ import os
 import requests
 import shutil
 import tempfile
-import subprocess
+import zipfile
 
 # Example usage
 mac_binary_urls = [
@@ -39,7 +39,15 @@ def install_mac_binaries():
                 print(f"Extracting {file_name}...")
                 extract_dir = os.path.join(tmp_dir, "extracted")
                 os.makedirs(extract_dir, exist_ok=True)
-                subprocess.run(["7z", "x", file_name, f"-o{extract_dir}"], check=True)
+
+                # Check if the file is a zip archive
+                if zipfile.is_zipfile(file_name):
+                    with zipfile.ZipFile(file_name, 'r') as zip_ref:
+                        zip_ref.extractall(extract_dir)
+                else:
+                    print(f"Unsupported file format for {file_name}.")
+                    success = False
+                    continue
 
                 # Move the binaries to the destination directory
                 for root, _, files in os.walk(extract_dir):
