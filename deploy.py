@@ -1,42 +1,42 @@
 import os
 import sys
 import shutil
-from pathlib import Path
+import requests
+from tqdm import tqdm
 import PyInstaller.__main__
 
 def get_platform_info():
     if sys.platform == 'win32':
         return {
-            'ffmpeg_path': 'ffmpeg/windows',
+            'ffmpeg_path': os.path.join('ffmpeg', 'windows'),
             'ffmpeg_files': ['ffmpeg.exe', 'ffprobe.exe'],
             'separator': ';',
             'output_name': 'GMClip.exe'
         }
     elif sys.platform == 'darwin':
         return {
-            'ffmpeg_path': 'ffmpeg/mac',
-            'ffmpeg_files': ['ffmpeg', 'ffprobe'],
             'separator': ':',
             'output_name': 'GMClip'
         }
     else:  # Linux
         return {
-            'ffmpeg_path': 'ffmpeg/linux',
-            'ffmpeg_files': ['ffmpeg', 'ffprobe'],
             'separator': ':',
             'output_name': 'GMClip'
         }
+    
+
 
 def main():
     platform_info = get_platform_info()
-    
+
     # Prepare ffmpeg files
     ffmpeg_files = []
-    for file in platform_info['ffmpeg_files']:
-        src = os.path.join(platform_info['ffmpeg_path'], file)
-        if os.path.exists(src):
-            ffmpeg_files.append((src, '.'))
-            print(f"Found {src} , adding to the build")
+    if sys.platform == 'win32':
+        for file in platform_info['ffmpeg_files']:
+            src = os.path.join(platform_info['ffmpeg_path'], file)
+            if os.path.exists(src):
+                ffmpeg_files.append((src, '.'))
+                print(f"Found {src}, adding to the build")
 
     # Build with PyInstaller
     PyInstaller.__main__.run([
@@ -58,15 +58,14 @@ def main():
         '--noconfirm'
     ])
 
-    # Move the built executable to dist directory with platform-specific name
-    if os.path.exists('dist'):
-        src = os.path.join('dist', 'GMClip' + ('.exe' if sys.platform == 'win32' else ''))
-        dst_dir = os.path.join('dist', sys.platform)
-        os.makedirs(dst_dir, exist_ok=True)
-        dst = os.path.join(dst_dir, platform_info['output_name'])
-        if os.path.exists(src):
-            shutil.move(src, dst)
-            print(f"Successfully built {dst}")
+    # Move the built executable to a platform-specific directory
+    dist_dir = os.path.join('dist', sys.platform)
+    os.makedirs(dist_dir, exist_ok=True)
+    src = os.path.join('dist', 'GMClip' + ('.exe' if sys.platform == 'win32' else ''))
+    dst = os.path.join(dist_dir, platform_info['output_name'])
+    if os.path.exists(src):
+        shutil.move(src, dst)
+        print(f"Successfully built {dst}")
 
 if __name__ == "__main__":
     main()
