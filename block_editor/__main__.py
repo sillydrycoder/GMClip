@@ -4,21 +4,19 @@ import argparse
 import subprocess
 from PySide6.QtWidgets import QApplication
 from block_editor.gui.video_player import VideoPlayer
-from block_editor.utils.unix_ffbinary_manager import install_mac_binaries
+from block_editor.utils.unix_ffbinary_manager import install_unix_binaries
 
 def check_ffmpeg():
     try:
         subprocess.run(["ffmpeg", "-version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return True
     except FileNotFoundError:
-        if sys.platform == 'darwin':
-            success = install_mac_binaries()
+        if sys.platform == 'darwin' or sys.platform == 'linux':
+            success = install_unix_binaries()
             if success:
                 return True
             else:
                 return False
-        elif sys.platform == 'linux':
-            pass
         else:
             return False
 

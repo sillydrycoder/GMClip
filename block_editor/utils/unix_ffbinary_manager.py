@@ -30,7 +30,7 @@ def install_7z():
         subprocess.run(["brew", "install", "p7zip"], check=True)
         print("7z installed successfully.")
 
-def install_mac_binaries():
+def install_unix_binaries():
     dest_dir = "/usr/local/bin"
     success = True
 
@@ -72,13 +72,13 @@ def install_mac_binaries():
                     # Fallback to system 7z command
                     subprocess.run(["7z", "x", file_name, f"-o{extract_dir}"], check=True)
 
-                # Move the binaries to the destination directory
+                # Move the binaries to the destination directory using sudo cp
                 for root, _, files in os.walk(extract_dir):
                     for file in files:
                         source_path = os.path.join(root, file)
                         dest_path = os.path.join(dest_dir, file)
-                        print(f"Moving {source_path} to {dest_path}...")
-                        shutil.move(source_path, dest_path)
+                        print(f"Copying {source_path} to {dest_path} using sudo cp...")
+                        subprocess.run(["sudo", "cp", source_path, dest_path], check=True)
 
                 print(f"Installed binaries from {url}.")
 
