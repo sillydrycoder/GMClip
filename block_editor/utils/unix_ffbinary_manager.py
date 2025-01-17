@@ -78,6 +78,7 @@ def install_unix_binaries():
                         source_path = os.path.join(root, file)
                         dest_path = os.path.join(dest_dir, file)
                         print(f"Copying {source_path} to {dest_path} using sudo cp...")
+                        # for sudo approach.
                         subprocess.run(["sudo", "cp", source_path, dest_path], check=True)
 
                 print(f"Installed binaries from {url}.")
